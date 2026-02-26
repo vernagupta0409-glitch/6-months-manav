@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy 6 Months</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #fff0f6;
+      color: #333;
+      padding: 40px;
+    }
+    h1 {
+      color: #e91e63;
+    }
+    p {
+      max-width: 700px;
+      margin: 20px auto;
+      line-height: 1.6;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy 6 Months 💖</h1>
+  <p>
+    Happy 6 months to us, Manav 🤍✨  
+    Sach kahu toh mujhe abhi bhi believe nahi hota ki 6 mahine ho gaye. 27 Aug 2025 ko jo start hua tha, woh sirf ek relationship nahi tha… woh meri life ka ek important chapter ban gaya. Hum perfect nahi hain, hum fight bhi karte hain, main overthink bhi karti hoon, kabhi kabhi react bhi zyada kar deti hoon… par in sab ke beech ek cheez kabhi change nahi hui — mera pyaar tumhare liye.  
+    Tum sirf mere boyfriend nahi ho, tum meri habit ho, meri safe place ho, meri roz ki smile ho. Jab bhi future ke baare me sochti hoon, automatically tum usme hote ho. Shayad main kabhi kabhi insecure ho jati hoon, par woh sirf isliye kyunki tum mere liye bohot important ho.  
+    In 6 months me humne sirf memories nahi banayi, humne ek dusre ko samajhna bhi seekha. Aur main genuinely chahti hoon ki hum sirf saath na rahein… balki saath grow karein, better banein, mature banein.  
+    Aaj bas itna bolna hai — thank you for staying, thank you for loving me, and thank you for being mine. I choose you today, tomorrow, and har us din jab life thodi messy ho 🤍✨ I love you sooo much 😘❤️  
+    Happy 6 months, my Manav 💖
+  </p>
+</body>
+</html>

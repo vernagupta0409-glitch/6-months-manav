@@ -1,85 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>6 Months With Manav 🤍</title>
-<style>
-body {
-  background: linear-gradient(to right, #ffdde1, #ee9ca7);
-  font-family: Arial, sans-serif;
-  text-align: center;
-  padding: 50px;
-  color: #fff;
-}
-
-.card {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 35px;
-  border-radius: 25px;
-  backdrop-filter: blur(10px);
-  display: inline-block;
-  max-width: 500px;
-}
-
-h1 {
-  font-size: 34px;
-}
-
-p {
-  font-size: 18px;
-  margin-top: 20px;
-  line-height: 1.6;
-}
-
-button {
-  margin-top: 25px;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 25px;
-  background: white;
-  color: #ee9ca7;
-  font-size: 16px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-button:hover {
-  background: #ffe6ea;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #love-letter { height: 200px; overflow: hidden; }
+        #love-letter p { height: fit-content; animation: scroll 10s linear infinite; }
+        @keyframes scroll {
+            0% { transform: translateY(100%); }
+            100% { transform: translateY(-100%); }
+        }
+        .collage { display: flex; gap: 10px; }
+        .collage img { width: 33.33%; }
+    </style>
 </head>
-
 <body>
 
-<div class="card">
-  <h1>Happy 6 Months Manav 💖</h1>
-  <p>
-  6 months ago, on 27 Aug 2025,  
-  something beautiful started between us 🤍<br><br>
+    <h1>Welcome to the Love Page</h1>
+    
+    <audio autoplay loop>
+        <source src="your-romantic-song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 
-  Maybe we fight.  
-  Maybe I overthink.  
-  Maybe we both are imperfect.  
-
-  But one thing has never changed —  
-  I love you, Manav. 💫<br><br>
-
-  Thank you for being my comfort, my safe place,  
-  and the person I want to grow with 🌱✨  
-  </p>
-
-  <button onclick="showMessage()">Click Here 🤍</button>
-
-  <p id="hiddenMessage" style="display:none; margin-top:20px; font-weight:bold; font-size:20px;">
-  I choose you today, tomorrow, and in every version of my future 💍✨  
-  — Yours, always 🤍
-  </p>
-</div>
-
-<script>
-function showMessage() {
-  document.getElementById("hiddenMessage").style.display = "block";
-}
-</script>
+    <div id="love-letter">
+        <p>Your love letter goes here. It can be as long as you want and will scroll automatically!</p>
+    </div>
+    
+    <div id="love-messages-wall">
+        <h2>Love Messages</h2>
+        <ul>
+            <li>Love is not about how many days, months, or years you have been together. Love is about how much you love each other every single day.</li>
+            <li>Every love story is beautiful, but ours is my favorite.</li>
+            <li>In you, I’ve found the love of my life and my closest friend.</li>
+        </ul>
+    </div>
+    
+    <div class="collage">
+        <img src="photo1.jpg" alt="Romantic Photo 1">
+        <img src="photo2.jpg" alt="Romantic Photo 2">
+        <img src="photo3.jpg" alt="Romantic Photo 3">
+    </div>
 
 </body>
 </html>

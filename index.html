@@ -5,82 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Love Page</title>
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            margin: 0; 
-            padding: 0; 
-            background: #fcd7e0; 
+        body {
+            background-color: #ffe6f2;
+            font-family: 'Courier New', Courier, monospace;
+            color: #d5006d;
             overflow-x: hidden;
+            margin: 0;
         }
-        .header {
-            text-align: center; 
-            padding: 50px 0; 
-            background: #ff6f81; 
-            color: white; 
+        #spotify {
+            text-align: center;
+            margin-top: 20px;
         }
-        .collage {
-            display: flex; 
-            justify-content: center; 
-            flex-wrap: wrap; 
-            margin: 20px; 
+        #love-letter {
+            opacity: 0;
+            transition: opacity 1s;
+            padding: 20px;
+            margin: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        .collage img {
-            width: 30%; 
-            margin: 10px; 
-            border-radius: 15px; 
+        #quote-wall {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+        .quote {
+            background: #ffe6f2;
+            border: 1px solid #d5006d;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
             transition: transform 0.3s;
         }
-        .collage img:hover {
-            transform: scale(1.1);
+        .quote:hover {
+            transform: scale(1.05);
         }
-        .love-letter {
-            max-width: 600px; 
-            margin: auto; 
-            opacity: 0; 
-            transition: opacity 2s;
+        .photo-collage {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
         }
-        .reveal {
-            opacity: 1;
-        }
-        .messages-wall {
-            text-align: center; 
-            margin: 20px; 
+        .photo-collage img {
+            width: 30%;
+            margin: 0 10px;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-    <audio autoplay loop>
-        <source src="your-romantic-music.mp3" type="audio/mpeg">
-        Your browser does not support the audio tag.
-    </audio>
-    
-    <div class="header">
-        <h1>Welcome to My Love Page</h1>
+    <div id="spotify">
+        <iframe src="https://open.spotify.com/embed/track/1hQia6rxgfM1ly2hE3StWp" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" autoplay="true"></iframe>
     </div>
-
-    <div class="love-letter" id="loveLetter">
-        <h2>My Dearest</h2>
-        <p>This is a love letter that will reveal itself as you scroll...</p>
+    <div id="love-letter">
+        <h2>Dear Manav,</h2>
+        <p>Every moment with you is magical. You make me smile without even trying. Thank you for being my person, my love, my everything. I promise to love you more each day.</p>
+        <p>Forever yours,</p>
+        <p>Verna</p>
     </div>
-
-    <div class="messages-wall">
-        <h2>Love Messages Wall</h2>
-        <p>Message 1: "You are my greatest adventure."</p>
-        <p>Message 2: "In your smile, I see my happiness."</p>
-        <p>Message 3: "Every day with you is a beautiful addition to my life's journey."</p>
+    <div id="quote-wall">
+        <div class="quote">"You are my sun, my moon, and all my stars." — e.e. cummings</div>
+        <div class="quote">"In all the world, there is no heart for me like yours." — Maya Angelou</div>
+        <div class="quote">"I have waited for this opportunity for more than half a century, to repeat to you once again my vow of eternal fidelity and everlasting love." — Gabriel Garcia Marquez</div>
     </div>
-
-    <div class="collage">
-        <img src="Screenshot_20260226_002043_Instagram.jpg" alt="Love Photo 1">
-        <img src="Screenshot_20260226_224838_Instagram.jpg" alt="Love Photo 2">
-        <img src="Screenshot_20260226_224938_Instagram.jpg" alt="Love Photo 3">
+    <div class="photo-collage">
+        <img src="Screenshot_20260226_002043_Instagram.jpg" alt="Instagram Photo 1">
+        <img src="Screenshot_20260226_224838_Instagram.jpg" alt="Instagram Photo 2">
+        <img src="Screenshot_20260226_224938_Instagram.jpg" alt="Instagram Photo 3">
     </div>
-
     <script>
-        const loveLetter = document.getElementById('loveLetter');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                loveLetter.classList.add('reveal');
+        window.addEventListener('scroll', function() {
+            var loveLetter = document.getElementById('love-letter');
+            var rect = loveLetter.getBoundingClientRect();
+            if (rect.top < window.innerHeight) {
+                loveLetter.style.opacity = 1;
             }
         });
     </script>

@@ -3,46 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Love Page</title>
+    <title>Interactive Love Page</title>
     <style>
-        body { font-family: Arial, sans-serif; }
-        #love-letter { height: 200px; overflow: hidden; }
-        #love-letter p { height: fit-content; animation: scroll 10s linear infinite; }
-        @keyframes scroll {
-            0% { transform: translateY(100%); }
-            100% { transform: translateY(-100%); }
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: #fcd7e0; 
+            overflow-x: hidden;
         }
-        .collage { display: flex; gap: 10px; }
-        .collage img { width: 33.33%; }
+        .header {
+            text-align: center; 
+            padding: 50px 0; 
+            background: #ff6f81; 
+            color: white; 
+        }
+        .collage {
+            display: flex; 
+            justify-content: center; 
+            flex-wrap: wrap; 
+            margin: 20px; 
+        }
+        .collage img {
+            width: 30%; 
+            margin: 10px; 
+            border-radius: 15px; 
+            transition: transform 0.3s;
+        }
+        .collage img:hover {
+            transform: scale(1.1);
+        }
+        .love-letter {
+            max-width: 600px; 
+            margin: auto; 
+            opacity: 0; 
+            transition: opacity 2s;
+        }
+        .reveal {
+            opacity: 1;
+        }
+        .messages-wall {
+            text-align: center; 
+            margin: 20px; 
+        }
     </style>
 </head>
 <body>
-
-    <h1>Welcome to the Love Page</h1>
-    
     <audio autoplay loop>
-        <source src="your-romantic-song.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
+        <source src="your-romantic-music.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
     </audio>
+    
+    <div class="header">
+        <h1>Welcome to My Love Page</h1>
+    </div>
 
-    <div id="love-letter">
-        <p>Your love letter goes here. It can be as long as you want and will scroll automatically!</p>
+    <div class="love-letter" id="loveLetter">
+        <h2>My Dearest</h2>
+        <p>This is a love letter that will reveal itself as you scroll...</p>
     </div>
-    
-    <div id="love-messages-wall">
-        <h2>Love Messages</h2>
-        <ul>
-            <li>Love is not about how many days, months, or years you have been together. Love is about how much you love each other every single day.</li>
-            <li>Every love story is beautiful, but ours is my favorite.</li>
-            <li>In you, I’ve found the love of my life and my closest friend.</li>
-        </ul>
+
+    <div class="messages-wall">
+        <h2>Love Messages Wall</h2>
+        <p>Message 1: "You are my greatest adventure."</p>
+        <p>Message 2: "In your smile, I see my happiness."</p>
+        <p>Message 3: "Every day with you is a beautiful addition to my life's journey."</p>
     </div>
-    
+
     <div class="collage">
-        <img src="photo1.jpg" alt="Romantic Photo 1">
-        <img src="photo2.jpg" alt="Romantic Photo 2">
-        <img src="photo3.jpg" alt="Romantic Photo 3">
+        <img src="Screenshot_20260226_002043_Instagram.jpg" alt="Love Photo 1">
+        <img src="Screenshot_20260226_224838_Instagram.jpg" alt="Love Photo 2">
+        <img src="Screenshot_20260226_224938_Instagram.jpg" alt="Love Photo 3">
     </div>
 
+    <script>
+        const loveLetter = document.getElementById('loveLetter');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                loveLetter.classList.add('reveal');
+            }
+        });
+    </script>
 </body>
 </html>
